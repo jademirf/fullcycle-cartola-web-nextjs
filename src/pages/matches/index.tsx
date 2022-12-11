@@ -2,7 +2,7 @@ import { Button } from '@mui/material'
 import type { NextPage } from 'next'
 
 
-const Home: NextPage = () => {
+const ListMatchesPage: NextPage = () => {
   return (
     <div>
       <Button variant="contained">Teste</Button>
@@ -10,4 +10,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default ListMatchesPage
