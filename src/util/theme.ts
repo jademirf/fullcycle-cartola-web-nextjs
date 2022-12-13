@@ -9,6 +9,20 @@ export const roboto = Roboto({
 })
 
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#B8C858',
+    },
+    secondary: {
+      main: '#0E4987',
+    },
+    background: {
+      default: '#09345E',
+      paper: '#0E4987'
+    },
+    divider: '#1B73A7',
+    mode: 'dark',
+  },
   components: {
     MuiCssBaseline: {
       styleOverrides: {
@@ -25,6 +39,15 @@ const theme = createTheme({
           BackgroundSize: "cover",
           MozBackgroundSize: "cover",
         }
+      }
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: ({theme, ownerState}) => ({
+          ...(ownerState.variant === 'outlined' && {
+            border: `3px solid ${theme.palette.divider}`,
+          })
+        })
       }
     }
   }
